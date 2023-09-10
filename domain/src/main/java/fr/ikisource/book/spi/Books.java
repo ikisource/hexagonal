@@ -7,6 +7,4 @@ public interface Books {
     Book getById(Long id);
 
     Book save(Book book);
-
-
 }
