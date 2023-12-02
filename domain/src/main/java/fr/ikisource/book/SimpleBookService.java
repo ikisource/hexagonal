@@ -3,13 +3,13 @@ package fr.ikisource.book;
 import ddd.DomainService;
 import fr.ikisource.book.api.BookService;
 import fr.ikisource.book.repository.BookRepository;
-//import jakarta.transaction.Transactional;
 
-//@Transactional
+import java.util.Optional;
+
 @DomainService
 public class SimpleBookService implements BookService {
 
-    BookRepository bookRepository;
+    private BookRepository bookRepository;
 
     public SimpleBookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -18,8 +18,12 @@ public class SimpleBookService implements BookService {
     @Override
     public Book create(Book book) {
 
-        bookRepository.save(book);
-
         return bookRepository.save(book);
+    }
+
+    @Override
+    public Optional<Book> findById(Long id) {
+
+        return bookRepository.findById(id);
     }
 }

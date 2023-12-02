@@ -22,4 +22,9 @@ public class BookMapper {
 
         return new Book(bookDto.id(), bookDto.title());
     }
+
+    public static BookDto toDto(Book book) {
+
+        return new BookDto(book.id(), book.title());
+    }
 }

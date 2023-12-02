@@ -3,13 +3,9 @@ package fr.ikisource.configuration;
 import ddd.DomainService;
 import ddd.Stub;
 import fr.ikisource.book.Book;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 @Configuration
 //@EnableTransactionManagement
